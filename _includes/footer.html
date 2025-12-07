@@ -9,7 +9,6 @@
     </div>
 </footer>
 
-<!-- SCHEMA MARKUP -->
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -24,47 +23,6 @@
         "position": 2,
         "name": "{{ page.title }}",
         "item": "{{ site.url }}{{ page.url }}"
-    }]
-}
-</script>
-
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "{{ page.title | default: site.title }}",
-    "author": "Editorial Team",
-    "publisher": {
-        "@type": "Organization",
-        "name": "MMFOOTY",
-        "logo": {
-            "@type": "ImageObject",
-            "url": "{{ site.url }}{{ site.site_logo }}"
-        }
-    },
-    "description": "{{ page.description | default: site.description }}",
-    "mainEntityOfPage": "{{ site.url }}{{ page.url }}"
-}
-</script>
-
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [{
-        "@type": "Question",
-        "name": "Where can I watch live football matches?",
-        "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Live matches can be streamed through official broadcasters such as ESPN, NBC Sports, Paramount+, and other licensed platforms."
-        }
-    },{
-        "@type": "Question",
-        "name": "Is the football schedule updated daily?",
-        "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, our football schedule is updated every day based on official league announcements."
-        }
     }]
 }
 </script>
