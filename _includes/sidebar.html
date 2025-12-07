@@ -1,0 +1,11 @@
+<!-- Sidebar Ad 1 -->
+
+<!-- Popular Leagues Widget -->
+<div class="sidebar-widget">
+    <h3>Popular Leagues</h3>
+    {% for league in site.data.leagues %}
+        <div class="upcoming-match">
+            <a href="{{ league.url | relative_url }}">{{ league.name }}</a>
+        </div>
+    {% endfor %}
+</div>
