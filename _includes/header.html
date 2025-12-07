@@ -1,0 +1,15 @@
+<header>
+    <div class="header-inner">
+        <a href="{{ site.url }}" class="logo">MM<span>FOOTY</span></a>
+        <nav>
+            {% for item in site.navigation %}
+                <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+            {% endfor %}
+        </nav>
+    </div>
+</header>
+
+<!-- BREADCRUMB SEO -->
+<div class="breadcrumb">
+    <a href="/">Home</a> › <span>{{ page.title }}</span>
+</div>
