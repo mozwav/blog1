@@ -328,3 +328,133 @@ footer {
         width: 100%;
     }
 }
+
+
+/* Tambahkan setelah styles yang sudah ada */
+
+/* MATCH STATUS INDICATORS */
+.simple-match {
+    position: relative;
+    
+    &[data-status="today"] {
+        border-left: 4px solid #e63946;
+        background: #fff5f5;
+        
+        .team-names {
+            color: #e63946;
+        }
+        
+        .match-time:before {
+            content: "● ";
+            color: #e63946;
+            animation: pulse 1.5s infinite;
+        }
+    }
+    
+    &[data-status="upcoming"] {
+        border-left: 4px solid #4a90e2;
+        background: #f0f7ff;
+        
+        .team-names {
+            color: #333;
+        }
+    }
+    
+    &[data-status="live"] {
+        border-left: 4px solid #00c853;
+        background: #f1f8e9;
+        animation: live-pulse 2s infinite;
+        
+        .team-names {
+            color: #00c853;
+            font-weight: bold;
+        }
+        
+        .match-time:before {
+            content: "▶ ";
+            color: #00c853;
+        }
+    }
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+@keyframes live-pulse {
+    0% { box-shadow: 0 0 0 0 rgba(0, 200, 83, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(0, 200, 83, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 200, 83, 0); }
+}
+
+/* MATCH INFO ENHANCEMENT */
+.match-info {
+    .team-names {
+        font-size: 16px;
+        margin-bottom: 5px;
+        font-weight: 600;
+    }
+    
+    .match-time {
+        font-size: 14px;
+        color: #666;
+        display: flex;
+        align-items: center;
+        
+        &:before {
+            margin-right: 5px;
+        }
+    }
+}
+
+/* LIVE BUTTON ENHANCEMENT */
+.live-here-btn {
+    background: linear-gradient(135deg, #e63946, #c1121f);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    min-width: 120px;
+    box-shadow: 0 4px 6px rgba(230, 57, 70, 0.2);
+    
+    &:hover {
+        background: linear-gradient(135deg, #c1121f, #a00d19);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 8px rgba(230, 57, 70, 0.3);
+        color: white;
+        text-decoration: none;
+    }
+    
+    &:active {
+        transform: translateY(0);
+    }
+}
+
+/* TODAY'S MATCHES HEADER */
+.simple-schedule h2 {
+    color: #333;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0f0f0;
+    font-size: 1.5rem;
+    position: relative;
+    
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 100px;
+        height: 2px;
+        background: #e63946;
+    }
+}
