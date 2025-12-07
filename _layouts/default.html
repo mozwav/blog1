@@ -7,33 +7,7 @@
       {{ content }}
     </div>
 
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-          {%- if site.footer_links -%}
-          <div class="social-icons">
-            {%- for footer_link in site.footer_links -%}
-            {%- if footer_link.url contains "://" -%}
-            {%- assign url = footer_link.url -%}
-            {%- else -%}
-            {%- assign url = footer_link.url | relative_url -%}
-            {%- endif -%}
-            <a class="social-icon" href="{{ url }}"><i class="{{ footer_link.icon | default: 'fa fa-link' }} fa-2x" title="{{ footer_link.title }}"></i></a>
-            {%- endfor -%}
-            <a class="social-icon" rel="me" href="https://fosstodon.org/@hakerdefo"><i class="{{ 'fa fa-mastodon-square' }} fa-2x" title="Mastodon"></i></a>
-          </div>
-          {%- endif -%}
-
-          <div class="copyright">
-            {% if site.copyright %}
-            {{ site.copyright | markdownify }}
-            {% else %}
-            <p>&copy; {{ site.time | date: '%Y' }} {{ site.title | default: site.title }}. Powered by <a href="https://github.com/forever-jekyll/forever-jekyll" rel="nofollow">Forever Jekyll</a>.</p>
-            {% endif %}
-          </div>
-        </footer>
-      </div>
-    </div>
+{% include footer.html %}
 
     <script defer src="https://cdn.plyr.io/3.6.5/plyr.js"></script>
     <script>
