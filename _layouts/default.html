@@ -1,28 +1,21 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
     {% include head.html %}
-  <body>
-        {% include header.html %}
-    <div id="main" role="main" class="container">
-      {{ content }}
+<body>
+    {% include header.html %}
+    
+    <div class="container">
+        <!-- MAIN CONTENT -->
+        <div class="content">
+            {{ content }}
+        </div>
+        
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+            {% include sidebar.html %}
+        </div>
     </div>
-
-{% include footer.html %}
-
-    <script defer src="https://cdn.plyr.io/3.6.5/plyr.js"></script>
-    <script>
-      const player = new Plyr("#player", { noCookie: true, rel: 0, showinfo: 0, iv_load_policy: 3, modestbranding: 1, playsinline: 1 , enablejsapi: 1, autoplay: 0, focused: true, global: false });
-      window.player = player;
-    </script>
-
-    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
-    <script type="text/javascript">
-      const lightbox = GLightbox({
-          touchNavigation: true,
-          loop: true,
-          autoplayVideos: true
-      });
-    </script>
-
-  </body>
+    
+    {% include footer.html %}
+</body>
 </html>
