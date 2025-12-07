@@ -2,52 +2,74 @@
 layout: default
 ---
 
-<article class="post">
-  <h1>{{ page.title }}</h1>
-
-  <div class="entry">
-    {{ content }}
-    <hr>
-  </div>
-
-  <div class="date">
-    <i class="fa fa-calendar fa-fw" aria-hidden="true"></i>&nbsp;Date:<span style="color: #333333; font-weight: normal;">&nbsp;{{ page.date | date: "%B %e, %Y" }}</span>
-  </div>
-
-  <div class="post-categories">
-    <i class="fa fa-tags fa-fw" aria-hidden="true"></i>&nbsp;Tags:&nbsp;
-    {% if post %}
-    {% assign categories = post.categories %}
-    {% else %}
-    {% assign categories = page.categories %}
-    {% endif %}
-    {% for category in categories %}
-    <a class="categories-button"<a href="{{site.baseurl}}/categories/#{{category|slugize}}">{{category}}</a>
-       {% unless forloop.last %}{% endunless %}
-       {% endfor %}
-       </div>
-
-  <div class="share-post">
-    <i class="fa fa-share-alt-square fa-fw" aria-hidden="true"></i>&nbsp;Share:&nbsp;
-    {% include share-buttons.html %}
-  </div>
-
-  <div class="no-comments">
-    <i class="fa fa-commenting fa-fw" aria-hidden="true"></i>&nbsp;Comments:<span style="color: #333333; font-weight: normal;">&nbsp;
-      <p>I don't have comments on this blog as they not only are difficult to manage, but are also prone to privacy and security risks.<br>Instead of leaving a comment, you could <a href="mailto:pclink1@y7mail.com?subject=Feedback regarding {{ page.title }}">email me</a> directly.</p></span>
-  </div>
-
-  <div class="buy-coffee">
-    <i class="fa fa-coffee fa-fw" aria-hidden="true"></i>&nbsp;Support:<span style="color: #333333; font-weight: normal;">&nbsp;
-      <p>Liked what you just read? Please consider <a href="https://paypal.me/hakerdefo">buying me a cup of coffee!</a> <i class="fa fa-smile-o fa-fw" aria-hidden="true"></i></p></span>
-  </div>
-
-  <div class="related-posts">
-    {% include related-posts.html %}
-  </div>
-
-  <div class="post-nav">
-    {% include post-nav.html %}
-  </div>
-
+<article class="post-content">
+    <!-- Breadcrumb SEO -->
+    <div class="breadcrumb">
+        <a href="/">Home</a> › <span>Premier League Live Streaming</span>
+    </div>
+    
+    <!-- Ad Unit 1 -->
+    {% include ads.html type="adsense" slot="6856049393" height="110px" padding="40px" %}
+    
+    <!-- Judul Post -->
+    <h1 class="post-title">{{ page.title }}</h1>
+    
+    <!-- Simple Live Streaming Schedule -->
+    <div class="simple-schedule">
+        <h2>Today's Premier League Live Matches</h2>
+        
+        {% assign premier_league_matches = site.data.matches | where: "league", "Premier League" %}
+        
+        {% for match in premier_league_matches %}
+        <div class="match-card">
+            <h3 class="match-title">{{ match.team1 }} vs {{ match.team2 }}</h3>
+            <div class="match-details">{{ match.date }} | {{ match.venue }}</div>
+            <hr class="match-divider">
+            <div class="match-action">
+                <a href="{{ match.live_url }}" class="live-here-btn">LIVE HERE</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    
+    <!-- Ad Unit 2 -->
+    {% include ads.html type="adsense" slot="6699572070" height="110px" padding="40px" %}
+    
+    <!-- Konten Artikel dari file markdown -->
+    <div class="article-content">
+        {{ content }}
+    </div>
 </article>
+
+<!-- Schema Markup -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "{{ site.url }}"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Premier League Live Streaming",
+            "item": "{{ site.url }}{{ page.url }}"
+        }
+    ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "SportsEvent",
+    "name": "Premier League Live Matches",
+    "startDate": "2024-01-01",
+    "description": "Today's Premier League football matches live streaming schedule",
+    "eventStatus": "https://schema.org/EventScheduled"
+}
+</script>
