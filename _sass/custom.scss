@@ -222,6 +222,160 @@ footer {
     text-decoration: underline;
 }
 
+/* =========================================== */
+/* STYLES UNTUK HOMEPAGE (INDEX) DAN LIVE PAGE */
+/* =========================================== */
+
+/* MATCH CARD STYLES (Format seperti screenshot) */
+.match-card {
+    background: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #eaeaea;
+}
+
+.match-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 8px 0;
+    line-height: 1.4;
+}
+
+.match-details {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.match-divider {
+    border: none;
+    border-top: 1px solid #eaeaea;
+    margin: 15px 0;
+    height: 1px;
+}
+
+.match-action {
+    text-align: center;
+    padding-top: 10px;
+}
+
+/* LIVE HERE BUTTON (seperti screenshot) - khusus untuk halaman live */
+.live-here-btn {
+    background: #e63946;
+    color: white;
+    border: none;
+    padding: 12px 40px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 5px 0;
+}
+
+.live-here-btn:hover {
+    background: #c1121f;
+    color: white;
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(230, 57, 70, 0.3);
+}
+
+/* VIEW BUTTON (untuk homepage) - pertahankan style yang sudah ada */
+.view-button {
+    background: #e63946;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 14px;
+    white-space: nowrap;
+    font-weight: bold;
+    transition: background 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    min-width: 60px;
+}
+
+.view-button:hover {
+    background: #c1121f;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* HEADER untuk schedule di halaman live */
+.simple-schedule h2 {
+    color: #333;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e63946;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+/* Sembunyikan format lama */
+.simple-match {
+    display: none;
+}
+
+/* Hapus styles lama yang tidak perlu */
+.match-info, 
+.team-names, 
+.match-time {
+    /* Styles ini sudah diganti dengan match-card */
+}
+
+/* ARTICLE CONTENT STYLES */
+.article-content {
+    margin: 30px 0;
+    
+    h2 {
+        color: #333;
+        margin: 25px 0 15px;
+        border-bottom: 2px solid #f0f0f0;
+        padding-bottom: 10px;
+        font-size: 1.5rem;
+    }
+    
+    h3 {
+        color: #444;
+        margin: 20px 0 10px;
+        font-size: 1.3rem;
+    }
+    
+    p {
+        margin-bottom: 15px;
+        text-align: justify;
+        line-height: 1.7;
+    }
+    
+    ul, ol {
+        margin-bottom: 15px;
+        padding-left: 20px;
+        
+        li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+    }
+    
+    strong {
+        color: #333;
+        font-weight: 700;
+    }
+}
+
 /* RESPONSIVE STYLES */
 @media (max-width: 920px) {
     .container {
@@ -266,6 +420,7 @@ footer {
         padding: 12px;
     }
     
+    /* League List di Homepage */
     .league-item {
         padding: 10px 12px;
         flex-wrap: wrap;
@@ -285,6 +440,29 @@ footer {
         min-width: 55px;
     }
     
+    /* Match Card di Live Page */
+    .match-card {
+        padding: 15px;
+    }
+    
+    .match-title {
+        font-size: 16px;
+    }
+    
+    .match-details {
+        font-size: 13px;
+    }
+    
+    .live-here-btn {
+        padding: 10px 25px;
+        font-size: 14px;
+        width: 100%;
+    }
+    
+    .simple-schedule h2 {
+        font-size: 1.5rem;
+    }
+    
     .breadcrumb {
         font-size: 13px;
         padding: 0 10px;
@@ -293,6 +471,16 @@ footer {
     .footer-links a {
         margin: 0 5px;
         font-size: 13px;
+    }
+    
+    .article-content {
+        h2 {
+            font-size: 1.3rem;
+        }
+        
+        h3 {
+            font-size: 1.1rem;
+        }
     }
 }
 
@@ -310,6 +498,7 @@ footer {
         padding: 3px 0;
     }
     
+    /* League List di Homepage */
     .league-item {
         flex-direction: column;
         align-items: flex-start;
@@ -327,134 +516,18 @@ footer {
         text-align: center;
         width: 100%;
     }
-}
-
-
-/* Tambahkan setelah styles yang sudah ada */
-
-/* MATCH STATUS INDICATORS */
-.simple-match {
-    position: relative;
     
-    &[data-status="today"] {
-        border-left: 4px solid #e63946;
-        background: #fff5f5;
-        
-        .team-names {
-            color: #e63946;
-        }
-        
-        .match-time:before {
-            content: "● ";
-            color: #e63946;
-            animation: pulse 1.5s infinite;
-        }
+    /* Match Card di Live Page */
+    .match-card {
+        padding: 12px;
     }
     
-    &[data-status="upcoming"] {
-        border-left: 4px solid #4a90e2;
-        background: #f0f7ff;
-        
-        .team-names {
-            color: #333;
-        }
+    .match-title {
+        font-size: 15px;
     }
     
-    &[data-status="live"] {
-        border-left: 4px solid #00c853;
-        background: #f1f8e9;
-        animation: live-pulse 2s infinite;
-        
-        .team-names {
-            color: #00c853;
-            font-weight: bold;
-        }
-        
-        .match-time:before {
-            content: "▶ ";
-            color: #00c853;
-        }
-    }
-}
-
-@keyframes pulse {
-    0% { opacity: 1; }
-    50% { opacity: 0.5; }
-    100% { opacity: 1; }
-}
-
-@keyframes live-pulse {
-    0% { box-shadow: 0 0 0 0 rgba(0, 200, 83, 0.4); }
-    70% { box-shadow: 0 0 0 10px rgba(0, 200, 83, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(0, 200, 83, 0); }
-}
-
-/* MATCH INFO ENHANCEMENT */
-.match-info {
-    .team-names {
-        font-size: 16px;
-        margin-bottom: 5px;
-        font-weight: 600;
-    }
-    
-    .match-time {
-        font-size: 14px;
-        color: #666;
-        display: flex;
-        align-items: center;
-        
-        &:before {
-            margin-right: 5px;
-        }
-    }
-}
-
-/* LIVE BUTTON ENHANCEMENT */
-.live-here-btn {
-    background: linear-gradient(135deg, #e63946, #c1121f);
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 6px;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 14px;
-    transition: all 0.3s;
-    text-decoration: none;
-    display: inline-block;
-    text-align: center;
-    min-width: 120px;
-    box-shadow: 0 4px 6px rgba(230, 57, 70, 0.2);
-    
-    &:hover {
-        background: linear-gradient(135deg, #c1121f, #a00d19);
-        transform: translateY(-2px);
-        box-shadow: 0 6px 8px rgba(230, 57, 70, 0.3);
-        color: white;
-        text-decoration: none;
-    }
-    
-    &:active {
-        transform: translateY(0);
-    }
-}
-
-/* TODAY'S MATCHES HEADER */
-.simple-schedule h2 {
-    color: #333;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #f0f0f0;
-    font-size: 1.5rem;
-    position: relative;
-    
-    &:after {
-        content: "";
-        position: absolute;
-        bottom: -2px;
-        left: 0;
-        width: 100px;
-        height: 2px;
-        background: #e63946;
+    .live-here-btn {
+        padding: 8px 20px;
+        font-size: 13px;
     }
 }
