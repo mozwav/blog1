@@ -30,16 +30,18 @@ url: https://mozwav.github.io
 # then add in the baseurl here, like this: "/repository-name"
 baseurl: "/blog1"
 
-# Navigation menu
-navigation_links:
-  - title: Blog
-    url: /
-
-  - title: About
-    url: /about
-
-  - title: Search
-    url: /search
+# Site navigation
+navigation:
+  - title: Live
+    url: /live
+  - title: Schedule
+    url: /schedule
+  - title: Leagues
+    url: /leagues
+  - title: Results
+    url: /results
+  - title: Streaming
+    url: /streaming
 
 # Footer icons
 footer_links:
