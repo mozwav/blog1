@@ -1,0 +1,29 @@
+- name: "Premier League"
+  slug: "premier-league"
+  url: "/live"
+  featured: true
+  
+- name: "La Liga"
+  slug: "la-liga"
+  url: "/live"
+  featured: true
+  
+- name: "Serie A"
+  slug: "serie-a"
+  url: "/live"
+  featured: true
+  
+- name: "UEFA Champions League"
+  slug: "champions-league"
+  url: "/live"
+  featured: true
+  
+- name: "UEFA Europa League"
+  slug: "europa-league"
+  url: "/live"
+  featured: true
+  
+- name: "Bundesliga"
+  slug: "bundesliga"
+  url: "/live"
+  featured: false
