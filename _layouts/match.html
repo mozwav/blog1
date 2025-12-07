@@ -1,0 +1,91 @@
+---
+layout: default
+---
+
+<article class="match-content">
+    <!-- Breadcrumb SEO -->
+    <div class="breadcrumb">
+        <a href="/">Home</a> › 
+        <a href="/live/">Premier League</a> › 
+        <span>{{ page.title }}</span>
+    </div>
+    
+    <!-- Match Header -->
+    <div class="match-header">
+        <h1 class="match-title">{{ page.title }}</h1>
+        <div class="match-subtitle">{{ page.subtitle }}</div>
+    </div>
+    
+    <!-- Ad Unit 1 -->
+    {% include ads.html type="adsense" slot="6856049393" height="110px" padding="40px" %}
+    
+    <!-- Article Content -->
+    <div class="article-content">
+        {{ content }}
+    </div>
+    
+    <!-- Event Details -->
+    <div class="event-details">
+        <h3>Event Details</h3>
+        <div class="detail-item">
+            <div class="detail-label">NAME:</div>
+            <div class="detail-value">{{ page.title }}</div>
+        </div>
+        <div class="detail-item">
+            <div class="detail-label">DATE:</div>
+            <div class="detail-value">{{ page.date | date: "%d %B %Y" }}</div>
+        </div>
+        <div class="detail-item">
+            <div class="detail-label">TIME:</div>
+            <div class="detail-value">{{ page.time }}</div>
+        </div>
+        <div class="detail-item">
+            <div class="detail-label">VENUE:</div>
+            <div class="detail-value">{{ page.venue }}</div>
+        </div>
+    </div>
+    
+    <!-- Ad Unit 2 -->
+    {% include ads.html type="adsense" slot="6699572070" height="110px" padding="40px" %}
+    
+    <!-- TV Channels -->
+    <div class="tv-channels">
+        <h3>TV Channels & Streaming</h3>
+        <div class="channel-list">
+            {% for channel in site.data.channels %}
+            <div class="channel-item">
+                <div class="channel-name">{{ channel.name }}</div>
+                <a href="{{ channel.url }}" class="watch-button">Watch Here</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</article>
+
+<!-- Schema Markup -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "{{ site.url }}"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Premier League",
+            "item": "{{ site.url }}/live/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "{{ page.title }}",
+            "item": "{{ site.url }}{{ page.url }}"
+        }
+    ]
+}
+</script>
