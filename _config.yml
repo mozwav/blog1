@@ -8,18 +8,6 @@ title: "MMFOOTY"
 # Short bio or description (displayed in the header)
 description: "Today's football schedule with live match times, official streaming links, and updated scores"
 
-# URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: /assets/image/avatar.png
-
-# Author
-author:
-  name: hakerdefo
-  url: https://github.com/hakerdefo
-
-#
-# Flags below are optional
-#
-
 # Your website URL (e.g. https://forever-jekyll.github.io or https://forever-jekyll.com)
 # Used for Sitemap.xml and your RSS feed
 url: https://www.mmfooty.com
@@ -34,28 +22,6 @@ baseurl: ""
 navigation:
   - title: Live
     url: /live
-  - title: Schedule
-    url: /schedule
-  - title: Leagues
-    url: /leagues
-  - title: Results
-    url: /results
-  - title: Streaming
-    url: /streaming
-
-# Footer icons
-footer_links:
-  - title: Feed
-    url: feed.xml
-    icon: fa fa-rss-square
-
-  - title: Email
-    url: mailto:pclink1@y7mail.com
-    icon: fa fa-envelope-square
-
-  - title: GitHub
-    url: https://github.com/hakerdefo
-    icon: fa fa-github-square
 
 # Enter your copyright text if you wish to override the default one.
 #copyright: "This site is made with <3 by *me, myself, and I*."
@@ -68,7 +34,7 @@ timezone: Asia/Kolkata
 #
 
 # permalink: pretty
-permalink: /:slug/
+permalink: /:slug
 
 # Jekyll 3 now only supports Kramdown for Markdown
 kramdown:
@@ -80,9 +46,6 @@ kramdown:
     # Use existing pygments syntax highlighting css
     css_class: 'highlight'
 
-# Pagination
-paginate: 5
-paginate_path: "/page/:num/"
 
 # Set the Sass partials directory, as we're using @imports
 sass:
