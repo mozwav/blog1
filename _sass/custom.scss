@@ -153,12 +153,16 @@ nav a:hover {
 .ads {
     margin: 20px 0;
     text-align: center;
+    position: relative;
 }
 
 .ad-unit {
     background: #ddd;
     padding: 20px;
     border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* FAQ Section (Homepage) */
