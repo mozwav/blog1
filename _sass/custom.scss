@@ -149,17 +149,55 @@ nav a:hover {
     text-decoration: none;
 }
 
-/* ADS */
-.ads {
-            margin: 20px 0;
-            text-align: center;
-        }
 
-        .ad-unit {
-            background: #ddd;
-            padding: 20px;
-            border-radius: 5px;
-        }
+.ads {
+    margin: 20px 0;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.ad-unit {
+    background: #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 0 auto;
+    
+    /* Fix untuk Google Ads */
+    ins.adsbygoogle {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow: hidden !important;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .ads {
+        margin: 15px 0;
+    }
+    
+    .ad-unit {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .ads {
+        margin: 10px 0;
+    }
+    
+    .ad-unit {
+        padding: 5px;
+        border-radius: 3px;
+    }
+}
 
 /* FAQ Section (Homepage) */
 .faq {
