@@ -1,6 +1,6 @@
 <div class="ads">
     <div class="ad-unit" style="height:{{ include.height }};padding-top:{{ include.padding }};">
-        {% if include.type == 'adsense' %}
+        
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1555037532758037"
      crossorigin="anonymous"></script>
 <!-- mm 4 -->
@@ -13,8 +13,6 @@
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-        {% else %}
-        Ad Unit ({{ include.width }}x{{ include.height }})
-        {% endif %}
+
     </div>
 </div>
