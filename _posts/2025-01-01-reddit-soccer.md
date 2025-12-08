@@ -19,7 +19,7 @@ categories: streaming
             <div class="team-names">{{ match.team1 }} vs {{ match.team2 }}</div>
             <div class="match-time">{{ match.date }} | {{ match.venue }}</div>
         </div>
-        <a href="{{ match.live_url }}" class="live-here-btn">WATCH ON STREAMEAST</a>
+        <a href="{{ match.live_url }}" class="live-here-btn">LIVE HERE</a>
     </div>
     {% endfor %}
 </div>
