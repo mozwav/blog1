@@ -7,7 +7,6 @@ description: "Hesgoal TV provides free live streaming of football matches from P
 categories: streaming
 ---
 
-<!-- Ad Unit 1 -->
 {% include ads.html type="adsense" slot="6856049393" height="110px" padding="40px" %}
 
 <!-- Simple Live Streaming Schedule dari Data YAML -->
@@ -25,7 +24,6 @@ categories: streaming
     {% endfor %}
 </div>
 
-<!-- Ad Unit 2 -->
 {% include ads.html type="adsense" slot="6699572070" height="110px" padding="40px" %}
 
 <!-- Article Content -->
