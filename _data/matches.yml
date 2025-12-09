@@ -8,10 +8,10 @@
   team1: "Inter Milan vs Liverpool"
   date: "Tuesday, 20:00 GMT"
   venue: "Champions League"
-  live_url: "https://www.mmfooty.com/sports1"
+  live_url: "https://www.mmfooty.com/liverpool"
   
 - id: 3
   team1: "Tottenham Hotspur vs Slavia Prague"
   date: "Tuesday, 20:00 GMT"
   venue: "Champions League"
-  live_url: "https://www.mmfooty.com/sports1"
+  live_url: "https://www.mmfooty.com/tottenham"
