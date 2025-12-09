@@ -2,7 +2,7 @@
 layout: post
 title: "Tottenham Hotspur vs Slavia Prague Live Streaming - Champions League"
 date: 2025-01-01
-permalink: /tottenham
+permalink: /tottenham-hotspur
 description: "Tottenham Hotspur vs Slavia Prague live streaming. Champions League match details, TV channels, and official streaming links."
 categories: tottenham
 ---
@@ -20,7 +20,7 @@ Tottenham Hotspur will host Slavia Prague at home in a critical UEFA Champions L
     <div class="detail-label">DATE:</div> <div class="detail-value">Tuesday, 9 December 2025</div>
     </div>
     <div class="detail-item">
-    <div class="detail-label">Kick-Off Time:</div> <div class="detail-value">20:00 GMT / UK time</div>
+    <div class="detail-label">Kick-Off:</div> <div class="detail-value">20:00 GMT / UK time</div>
     </div>
     <div class="detail-item">
     <div class="detail-label">Stadium:</div><div class="detail-value">Tottenham Hotspur Stadium, London</div>
