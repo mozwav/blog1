@@ -20,7 +20,7 @@ Inter Milan and Liverpool are set to meet in the 2025/26 Champions League group 
     <div class="detail-label">DATE:</div> <div class="detail-value">Tuesday, 9 December 2025</div>
     </div>
     <div class="detail-item">
-    <div class="detail-label">Kick-Off Time:</div> <div class="detail-value">20:00 GMT / UK time</div>
+    <div class="detail-label">Kick-Off:</div> <div class="detail-value">20:00 GMT / UK time</div>
     </div>
     <div class="detail-item">
     <div class="detail-label">Stadium:</div><div class="detail-value">San Siro / Stadio Giuseppe Meazza, Milan</div>
