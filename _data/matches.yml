@@ -1,17 +1,17 @@
 - id: 1
-  team1: "Atalanta vs Chelsea"
+  team1: "Real Madrid vs Manchester City"
   date: "Tuesday, 20:00 GMT"
   venue: "Champions League"
   live_url: "https://www.mmfooty.com/chelsea"
   
 - id: 2
-  team1: "Inter Milan vs Liverpool"
+  team1: "Club Brugge vs Arsenal"
   date: "Tuesday, 20:00 GMT"
   venue: "Champions League"
   live_url: "https://www.mmfooty.com/liverpool"
   
 - id: 3
-  team1: "Tottenham Hotspur vs Slavia Prague"
+  team1: "Bayer Leverkusen vs Newcastle United"
   date: "Tuesday, 20:00 GMT"
   venue: "Champions League"
   live_url: "https://www.mmfooty.com/tottenham-hotspur"
