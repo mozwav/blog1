@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Tottenham Hotspur vs Slavia Prague Live Streaming - Champions League"
+title: "Tottenham Hotspur"
 date: 2025-01-01
 permalink: /tottenham-hotspur
-description: "Tottenham Hotspur vs Slavia Prague live streaming. Champions League match details, TV channels, and official streaming links."
+description: "Tottenham Hotspur match details, TV channels, and official streaming links."
 categories: tottenham
 ---
 
